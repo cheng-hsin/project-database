@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Favorite Movies</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <!-- <link rel="stylesheet" href="assets/styles/app.css" /> -->
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <link rel="stylesheet" href="assets/styles/project.css" />
+    <link rel="stylesheet" href="assets/styles/boostrap.min.css" />
+    <link rel="stylesheet" href="assets/styles/modal.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <script src="assets/scripts/modal.js" defer></script> -->
+    <script src="assets/scripts/copy.js" defer></script>
+  </head>
+  <body>
+    <div id="backdrop"></div>
+    <div class="modal card" id="add-modal">
+      <div class="modal__content" width>
+        <label for="title">Project Title</label>
+        <input type="text" name="title" id="title" />
+        <label for="image-url">Image URL</label>
+        <input type="text" name="image-url" id="image-url" />
+        <label for="image-url">Demo description</label>
+        <input type="text" name="description" id="description" />
+        <label for="title">Demo Url</label>
+        <input type="text" name="demo-ulr" id="demo-url" />
+        <label for="rating">Your Rating</label>
+        <input
+          type="number"
+          step="1"
+          max="5"
+          min="1"
+          name="rating"
+          id="rating"
+        />
+      </div>
+      <div class="modal__actions">
+        <button class="btn btn--passive">Cancel</button>
+        <button class="btn btn--success">Add</button>
+      </div>
+    </div>
+    <div class="modal card" id="delete-modal">
+      <h2 class="modal__title">Are you sure?</h2>
+      <p class="modal__content">
+        Are you sure you want to delete this item? This action can't be made
+        undone!
+      </p>
+      <div class="modal__actions">
+        <button class="btn btn--passive">No (Cancel)</button>
+        <button class="btn btn--danger">Yes</button>
+      </div>
+    </div>
+
+    <header>
+      <div class="logo">
+        My Project database
+      </div>
+      <br />
+      <div class="search">
+        <div class="button btn">
+          <button>Add project</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="site-section">
+      <section id="entry-text" class="card">
+        <p>Your personal movie database!</p>
+      </section>
+      <div class="row mb-5" id="movie-list">
+        <!-- <div class="col-md-6 col-lg-4 mb-5">
+          <div class="media-image">
+            <img src="images/monster.png" alt="Image" class="img-fluid" />
+            <div class="media-image-body">
+              <h2 class="font-secondary text-uppercase">Monster killer</h2>
+              <span class="d-block mb-3">5/5 stars</span>
+              <p>可與怪獸互相攻擊，直到血量小於零</p>
+              <p>
+                <a href="monster.html" class="btn btn-primary text-white px-4"
+                  ><span class="caption">Demo Url</span></a
+                >
+              </p>
+              <p><a href=""> Edit </a><a href=""> Delete </a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-5">
+          <div class="media-image">
+            <img src="images/movie.png" alt="Image" class="img-fluid" />
+            <div class="media-image-body">
+              <h2 class="font-secondary text-uppercase">Favorate movie</h2>
+              <span class="d-block mb-3">5/5 stars</span>
+              <p>新增自己喜愛的影片資料</p>
+              <p>
+                <a
+                  href="favorate-movie.html"
+                  class="btn btn-primary text-white px-4"
+                  ><span class="caption">Demo Url</span></a
+                >
+              </p>
+              <p><a href=""> Edit </a><a href=""> Delete </a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-5">
+          <div class="media-image">
+            <img src="images/caculator.png" alt="Image" class="img-fluid" />
+            <div class="media-image-body">
+              <h2 class="font-secondary text-uppercase">Caculator</h2>
+              <span class="d-block mb-3">5/5 stars</span>
+              <p>特別的計算機</p>
+              <p>
+                <a href="caculator.html" class="btn btn-primary text-white px-4"
+                  ><span class="caption">Demo Url</span></a
+                >
+              </p>
+              <p><a href=""> Edit </a><a href=""> Delete </a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-5">
+          <div class="media-image">
+            <img src="images/video.png" alt="Image" class="img-fluid" />
+            <div class="media-image-body">
+              <h2 class="font-secondary text-uppercase">Video player</h2>
+              <span class="d-block mb-3">5/5 stars</span>
+              <p>影片播放器</p>
+              <p>
+                <a href="video.html" class="btn btn-primary text-white px-4"
+                  ><span class="caption">Demo Url</span></a
+                >
+              </p>
+              <p><a href=""> Edit </a><a href=""> Delete </a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-5">
+          <div class="media-image">
+            <img src="images/music.png" alt="Image" class="img-fluid" />
+            <div class="media-image-body">
+              <h2 class="font-secondary text-uppercase">Music player</h2>
+              <span class="d-block mb-3">5/5 stars</span>
+              <p>音樂撥放器</p>
+              <p>
+                <a href="music.html" class="btn btn-primary text-white px-4"
+                  ><span class="caption">Demo Url</span></a
+                >
+              </p>
+              <p><a href=""> Edit </a><a href=""> Delete </a></p>
+            </div>
+          </div>
+        </div> -->
+      </div>
+      <div id="demo" class="invisible"></div>
+    </main>
+  </body>
+</html>
